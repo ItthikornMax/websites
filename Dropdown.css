@@ -1,0 +1,235 @@
+/* dropdown เมนู */
+
+body
+{
+    margin: 0;
+}
+
+.menu
+{
+    width: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown1
+{
+    display: none;
+}
+
+.topnav
+{
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.topnav a 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+}
+
+.dropbtn a
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a.icon
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    float: right;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+}
+
+.topnav a:hover
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown
+{
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn
+{
+    height: 100%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: all .3s ease;
+    border-bottom: solid 2px transparent;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropbtn 
+{
+    background-color: red;
+    color: #333;
+    border-bottom: solid 2px #09185c;
+    transition: all .3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a 
+{
+    padding: 14px 16px;
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover 
+{
+  float: none;
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+/* เมื่อขนาดหน้าจอ เหลือ 934 px (ความกว้าง) */
+
+@media screen and (max-width: 1385px) 
+{
+    .topnav.responsive a 
+    {
+        float: none;
+    }
+
+    .dropdown1
+    {
+        display: block;
+    }
+
+    .topnav a:not(:first-child), .dropdown .dropbtn 
+    {
+        display: none;
+    }
+
+    .topnav a.icon 
+    {
+        color: black;
+        float: right;
+        display: flex;
+        height: 100%;
+        position: relative;
+    }
+    a.icon:hover
+    {
+        color: black;
+    }
+
+    .dropdown .dropbtn
+    {
+        background-color: white;
+    }
+
+    .topnav
+    {
+        float: right;
+        width: 250px;
+        box-shadow: 0 0 10px #000;
+    }
+
+    .dropdown:hover .dropbtn 
+    {
+        background-color: red;
+        border-bottom: solid 2px #09185c;
+        transition: all .3s ease;
+    }
+
+    .dateandtime
+    {
+        display: none;
+    }
+
+    .input
+    {
+        display: none;
+    }
+
+    .topnav.responsive {position: relative;} .topnav.responsive .icon 
+    {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive .dropdown {float: none;} .topnav.responsive .dropdown-content {position: relative;} .topnav.responsive .dropdown .dropbtn 
+    {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .topnav.responsive .dropdown-content
+    {
+        width: 100%;
+    }
+    .topnav.responsive .dropdown-content a 
+    {
+        display: block;
+        background-color: #eeeeee;
+        text-align: center;
+    }
+
+    .topnav.responsive .dropdown-content a:hover
+    {
+        background-color: #bdbdbd;
+    }
+
+    .topnav.responsive .disabled
+    {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.6;
+    }
+}
